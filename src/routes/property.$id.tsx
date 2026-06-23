@@ -144,7 +144,7 @@ function PropertyDetail() {
               <h2 className="text-xl font-bold mb-3">Tentang Properti</h2>
               <p className="text-muted-foreground leading-relaxed text-pretty">{property.description}</p>
               <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-2">
-                {property.amenities.map((a) => (
+                {property.amenities.map((a: string) => (
                   <div key={a} className="flex items-center gap-2 p-3 rounded-lg bg-secondary/50 text-sm">
                     <CheckCircle2 className="size-4 text-success shrink-0" />
                     {a}
