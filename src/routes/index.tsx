@@ -265,7 +265,7 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
-              to="/"
+              to="/search"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:opacity-95 transition-opacity shadow-glow"
             >
               <Search className="size-4" /> Cari Properti
@@ -361,16 +361,18 @@ function Featured() {
               Semua listing diverifikasi kepemilikannya secara on-chain.
             </p>
           </div>
-          <a href="#" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-primary">
+          <Link to="/search" className="hidden sm:inline-flex items-center gap-1 text-sm font-semibold text-primary">
             Lihat semua <ArrowRight className="size-4" />
-          </a>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {properties.map((p, i) => (
-            <article
+            <Link
+              to="/property/$id"
+              params={{ id: String(i + 1) }}
               key={p.title}
-              className="group cursor-pointer animate-fade-up"
+              className="group cursor-pointer animate-fade-up block"
               style={{ animationDelay: `${i * 80}ms` }}
             >
               <div className="relative overflow-hidden rounded-2xl ring-1 ring-border">
@@ -416,7 +418,7 @@ function Featured() {
                   ))}
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
