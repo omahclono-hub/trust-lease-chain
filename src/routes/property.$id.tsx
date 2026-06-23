@@ -20,7 +20,7 @@ import { useWallet } from "@/lib/wallet";
 import { toast } from "sonner";
 
 export const Route = createFileRoute("/property/$id")({
-  loader: ({ params }) => {
+  loader: ({ params }): { property: NonNullable<ReturnType<typeof getProperty>> } => {
     const property = getProperty(params.id);
     if (!property) throw notFound();
     return { property };
