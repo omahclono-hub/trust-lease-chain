@@ -265,7 +265,7 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Link
-              to="/"
+              to="/search"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary text-primary-foreground font-semibold text-base hover:opacity-95 transition-opacity shadow-glow"
             >
               <Search className="size-4" /> Cari Properti
