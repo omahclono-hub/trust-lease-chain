@@ -96,7 +96,7 @@ function PropertyDetail() {
             width={1280}
             height={960}
           />
-          {property.images.slice(0, 4).map((img, i) => (
+          {property.images.slice(0, 4).map((img: string, i: number) => (
             <button
               key={i}
               onClick={() => setActiveImg(i)}
@@ -238,7 +238,7 @@ function PropertyDetail() {
             <section>
               <h2 className="text-xl font-bold mb-3">Histori Transaksi On-Chain</h2>
               <div className="space-y-2">
-                {activity.slice(0, 4).map((a) => (
+                {activity.slice(0, 4).map((a: typeof activity[number]) => (
                   <div key={a.id} className="flex items-center gap-4 p-4 rounded-xl bg-card ring-1 ring-border">
                     <div className="size-9 rounded-lg bg-primary/10 text-primary grid place-items-center">
                       <FileCheck2 className="size-4" />
